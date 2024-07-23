@@ -8,15 +8,15 @@ public class Main{
 
         System.out.println("== Calculadora de Decimal Para Binário ==");
         do {
-            System.out.println("Digite um número binário maior ou igual a 2: ");
+            System.out.println("Digite decimal positivo (maior que zero): ");
             decimal = Integer.parseInt(scanner.nextLine());
-            if (decimal >= 2) {
-                System.out.println(converte(decimal));
+            if (decimal > 0) {
+                System.out.println("Valor " + decimal + " em binário: " + converte(decimal));
                 System.out.println("\n- Deseja encerrar? (s/n)");
                 res = scanner.nextLine();
             }
             System.out.println();
-        } while(decimal < 2 || res.equals("n") || res.equals("N"));
+        } while(decimal <= 0 || res.equals("n") || res.equals("N"));
 
         scanner.close();
     }
